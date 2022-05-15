@@ -188,6 +188,7 @@ print(df_tree)
 rd = sm.tsa.seasonal_decompose (df_tree['Value'].values, period = 12) # Период временного ряда равен 12
 rd.plot()
 plt.show()
+ghjhgjh
 value_array = df_tree["Value"].to_numpy()
 value_array_size = value_array.shape[0]
 print(value_array)
