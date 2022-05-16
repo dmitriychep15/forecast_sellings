@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Построение временных рядов</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>700</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_1">
+     <attribute name="title">
+      <string>Управление данными</string>
+     </attribute>
+     <widget class="QTableWidget" name="table_data">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>40</y>
+        <width>320</width>
+        <height>400</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_visualize_vr_data">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>500</y>
+        <width>170</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Отобразить</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmb_box_type_vr">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>490</y>
+        <width>170</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Дерево</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Алюминий</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Пластик</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_pick_frames_type">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>470</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Выберите тип рамок:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_show_frames_data">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>470</y>
+        <width>251</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Нажмите чтобы отобразить данные:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_add_new_record">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>230</y>
+        <width>200</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(215, 255, 225);
+color: rgb(40, 40, 40);</string>
+      </property>
+      <property name="text">
+       <string>Добавить новую запись</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="rec_to_edit">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>345</y>
+        <width>150</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Номер записи</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_edit_record">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>320</y>
+        <width>200</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 227, 100);
+color: rgb(40, 40, 40);</string>
+      </property>
+      <property name="text">
+       <string>Изменить запись</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="value_to_add">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>255</y>
+        <width>160</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Введите число продаж</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_show_stl">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>80</y>
+        <width>250</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Показать компоненты
+разложения</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="value_to_edit">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>345</y>
+        <width>120</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Число продаж</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_new_record_num">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>320</y>
+        <width>100</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Номер записи:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_new_record_value">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>320</y>
+        <width>70</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Значение:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_show_grafic">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>80</y>
+        <width>231</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Вывести график </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_frame_data">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>10</y>
+        <width>211</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Статистика продаж</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>170</y>
+        <width>361</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Редактирование записей в таблице</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>30</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Вывод графиков</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_return_data">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>480</y>
+        <width>200</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Вернуть/удалить
+запись</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="value_to_delete">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>435</y>
+        <width>150</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Номер записи</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_delete_record">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>410</y>
+        <width>200</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(253, 98, 108);
+color: rgb(40, 40, 40);</string>
+      </property>
+      <property name="text">
+       <string>Удалить запись</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chBox_del_first_rec">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>460</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Первая запись</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chBox_del_last_rec">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>490</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Последняя запись</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>STL-разложение</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>601</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPlainTextEdit" name="plainTextEdit_2"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox">
+         <item>
+          <property name="text">
+           <string>Дерево</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Алюминий</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="plainTextEdit"/>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox">
+         <property name="text">
+          <string>CheckBox</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Нажми на меня</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Построение прогноза</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
